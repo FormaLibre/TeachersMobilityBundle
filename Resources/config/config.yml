@@ -1,2 +1,6 @@
 plugin:
     has_options: false
+    themes:
+        -
+            name: 'teachermobility theme'
+            path: less/theme/theme.html.twig
