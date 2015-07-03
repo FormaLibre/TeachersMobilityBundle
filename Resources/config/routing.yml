@@ -1,0 +1,4 @@
+teachersmobility_controller:
+    resource: "@FormaLibreTeachersMobilityBundle/Controller/TeachersMobilityController.php"
+    type: annotation
+    prefix: /
