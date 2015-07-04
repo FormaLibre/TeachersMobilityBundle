@@ -75,7 +75,9 @@
             {% endif %}
         {% endif %}
         {% if "claro_index" | activeRoute or "claro_get_content_by_type" | activeRoute({'type': 'home'}) %}
-            <div class="jumbotron homepage"></div>
+            <div class="jumbotron-container">
+                <div class="teachersmobility-banner"></div>
+            </div>
         {% endif %}
 
        {% block impersonation %}
