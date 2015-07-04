@@ -14,7 +14,7 @@
                 </a>
             </div>
             <div class="navbar-collapse collapse">
-                {% set isHome = "claro_index" | activeRoute or "claro_get_content_by_type" | activeRoute({'type': 'home'}) %}
+                {% set isHome = "claro_index" | activeRoute or "claro_get_content_by_type" | activeRoute({'type': 'home'}) or "formalibre_job_pending_announcer_create_form" | activeRoute or "formalibre_job_seeker_create_form" | activeRoute %}
                 {% if headerLocale and isHome == false %}
                     <div class="navbar-form navbar-right clearfix">
                         <button class="pull-right locale-select btn btn-default">{{ app.request.locale | upper }}</button>
