@@ -41,6 +41,7 @@
 
     {% block login %}
         {% import _self as topbar %}
+        {{ topbar.item({'name':'home', 'href': path('claro_index'), 'icon':'home'}) }}
         {{ topbar.item({'name':'login', 'href': login_target, 'icon':'user'}) }}
     {% endblock login %}
 
