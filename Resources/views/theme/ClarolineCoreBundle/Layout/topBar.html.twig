@@ -15,9 +15,6 @@
                             {% if config.getParameter('name') != "" %}alt="{{ config.getParameter('name') }}"{% endif %}>
                     </a>
                 {% endif %}
-                <a class="navbar-brand" href="{{ path('claro_index') }}">
-                    Teachers mobility
-                </a>
             </div>
             <div class="navbar-collapse collapse">
                 {% set isHome = "claro_index" | activeRoute or "claro_get_content_by_type" | activeRoute({'type': 'home'}) or "formalibre_job_pending_announcer_create_form" | activeRoute or "formalibre_job_seeker_create_form" | activeRoute %}
