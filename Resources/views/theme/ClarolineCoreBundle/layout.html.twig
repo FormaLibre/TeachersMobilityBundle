@@ -67,17 +67,15 @@
                 </div>
             </div>
         </div>
-        {% if not is_path_mode and not has_role('ROLE_USURPATE_WORKSPACE_ROLE') %}
-            {% if workspace is defined %}
-                {% render controller('ClarolineCoreBundle:Layout:topBar', {'workspaceId': workspace.getId()}) %}
-            {% else %}
-                {% render controller('ClarolineCoreBundle:Layout:topBar') %}
-            {% endif %}
-        {% endif %}
-        {% if "claro_index" | activeRoute or "claro_get_content_by_type" | activeRoute({'type': 'home'}) %}
-            <div class="jumbotron-container">
-                <div class="teachersmobility-banner"></div>
-            </div>
+
+        {% if not has_role('ROLE_USURPATE_WORKSPACE_ROLE') %}
+            {% block topBarRender %}
+                {% if workspace is defined %}
+                    {% render(controller('ClarolineCoreBundle:Layout:topBar', {'workspaceId': workspace.id})) %}
+                {% else %}
+                    {% render(controller('ClarolineCoreBundle:Layout:topBar')) %}
+                {% endif %}
+            {% endblock %}
         {% endif %}
 
        {% block impersonation %}
@@ -99,10 +97,8 @@
         </div>
         <div id="push"></div>
     </div>
-   {% block footer %}
-        {% if not is_path_mode %}
-            {% render controller('ClarolineCoreBundle:Layout:footer') %}
-        {% endif %}
+    {% block footer %}
+        {% render(controller('ClarolineCoreBundle:Layout:footer')) %}
     {% endblock%}
 {% endblock %}
 

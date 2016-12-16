@@ -3,4 +3,4 @@ plugin:
     themes:
         -
             name: 'teachermobility theme'
-            path: less/theme/theme.html.twig
+  #          path: less/theme/theme.html.twig
